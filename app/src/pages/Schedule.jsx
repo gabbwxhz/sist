@@ -1,3 +1,9 @@
+import CalendarSchedule from '../components/calendar/CalendarSchedule'
+
 export default function Schedule() {
-   return <h1>schedule</h1>
+   return (
+      <div>
+         <CalendarSchedule />
+      </div>
+   )
 }
