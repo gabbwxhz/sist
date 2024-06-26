@@ -17,6 +17,8 @@ export const StyledCalendar = styled.div`
    .rbc-event {
       background-color: #3174ad;
       color: white;
+      border: none;
+      outline: none;
       border-radius: 4px;
       padding: 2px 5px;
    }
@@ -41,12 +43,20 @@ export const StyledCalendar = styled.div`
    .rbc-time-header-content .rbc-row.rbc-row-resource {
       border-bottom: none;
    }
-   
+
    .rbc-time-content {
       border: none;
    }
 
+   .rbc-events-container {
+      cursor: pointer;
+   }
+
    .rbc-time-view .rbc-allday-cell {
       border: none;
+   }
+
+   .rbc-current-time-indicator {
+      display: none;
    }
 `
