@@ -8,31 +8,62 @@ import moment from 'moment'
 import 'moment/locale/pt-br'
 
 import { Container, StyledCalendar } from './CalendarScheduleStyles'
+import { useState } from 'react'
 
 moment.locale('pt-br')
 
 const localizer = momentLocalizer(moment)
 
-export default function CalendarSchedule(props) {
+export default function CalendarSchedule() {
+   const [resourceId, setResourceId] = useState(null)
+
    const events = [
       {
          title: 'evento teste',
          start: moment().toDate(),
-         end: moment().add(60, 'minute').toDate(),
-         resource: 1
+         end: moment().add(120, 'minute').toDate(),
+         resourceId: resourceId
       }
    ]
 
    const resources = [
       {
          id: 1,
-         title: 'funcionaria 1'
+         title: 'gab'
       },
       {
          id: 2,
-         title: 'funcionaria 2'
+         title: 'gab'
+      },
+      {
+         id: 3,
+         title: 'gab'
+      },
+      {
+         id: 4,
+         title: 'gab'
+      },
+      {
+         id: 5,
+         title: 'gab'
+      },
+      {
+         id: 6,
+         title: 'gab'
+      },
+      {
+         id: 7,
+         title: 'gab'
+      },
+      {
+         id: 8,
+         title: 'gab'
       }
    ]
+
+   const handleSelectResourceId = (resource) => {
+      setResourceId(resource.resourceId)
+   }
 
    return (
       <Container>
@@ -61,6 +92,7 @@ export default function CalendarSchedule(props) {
                      localizer.format(end, 'HH:mm', culture),
                   agendaTimeFormat: 'HH:mm'
                }}
+               onSelectSlot={handleSelectResourceId}
             />
          </StyledCalendar>
       </Container>
