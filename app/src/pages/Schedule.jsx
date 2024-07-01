@@ -1,9 +1,9 @@
-import CalendarSchedule from '../components/calendar/CalendarSchedule'
+import EventModal from '../components/modals/event-modal/EventModal'
 
 export default function Schedule() {
    return (
       <div>
-         <CalendarSchedule />
+         <EventModal />
       </div>
    )
 }
